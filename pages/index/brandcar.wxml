@@ -1,0 +1,19 @@
+<!--pages/index/brandcar.wxml-->
+<view class="brandcarPage">
+  <view class="brands">
+    <view class="brandall">
+      <view class="brandnav">全部车系</view>
+      <view class="brandcons">
+        <view class="brandcon" wx:for="{{alls}}" wx:key='*this'>
+          <view class="brandconitems">
+            <view class="brandconitem">
+              <view class="brandconitem-le" bindtap="goCartype" data-itemindex='{{index}}'>{{item.name}}</view>
+              <view class="brandconitem-ri"><image src='{{item.src}}'/></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+</view>

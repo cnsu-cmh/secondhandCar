@@ -1,0 +1,55 @@
+/* pages/index/deploy.wxss */
+.deployPage{
+	background: #F0F4F7;
+	font-size: 34rpx;
+  min-height: 100vh;
+}
+.deployinfo{
+	color: #F9712C;
+	font-size: 28rpx;
+	padding: 20rpx;
+}
+.deploybox{
+	margin-top: 20rpx;
+  background: white;
+}
+.deploybox-title{
+	height:100rpx;
+	line-height: 100rpx;
+	background: white;
+	border-top:1rpx solid #F7F7F7;
+	border-bottom:1rpx solid #F7F7F7;
+	display: flex;
+	padding: 0 20rpx;
+}
+.deploybox-titlele{
+	flex:1;
+}
+.deploybox-titleri{
+	width: 50rpx;
+  height:50rpx;
+  line-height: 50rpx;
+	text-align:center;
+  transform:rotate(90deg); 
+  margin-top: 25rpx;
+}
+.textsty{
+  transform:rotate(-90deg); 
+}
+.deploys{
+	padding: 0 20rpx;
+}
+.deploy{
+	line-height: 100rpx;
+	background: white;
+	border-top:1rpx solid #F7F7F7;
+	border-bottom:1rpx solid #F7F7F7;
+	display: flex;
+}
+.deployle{
+	width: 50%;
+}
+.deployri{
+	flex:1;
+	text-align: right;
+}

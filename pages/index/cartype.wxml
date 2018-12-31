@@ -1,0 +1,35 @@
+<!--pages/index/cartype.wxml-->
+<view class="cartypePage">
+  <view class="types">
+    <!-- 全部车型 -->
+    <view class="typesty typeall" bindtap='allSelect'>
+      <icon class="icon" type="success" size="40rpx" color="{{allFlag==false ?'#01FFFF':'#EDECE8'}}"/>
+      全部车型  
+    </view>
+
+    <view class="type" wx:for='{{types}}' wx:key='*this' wx:for-item='typeitems' wx:for-index='index1' >
+      <view class="typenav typesty">
+        <view class="typenav-le" bindtap='navSelect' data-navindex='{{index1}}' >
+          <icon class="icon" type="success" size="40rpx" wx:if='{{ifFlag==1}}' color="{{flag==false?'#01FFFF':'#EDECE8'}}" />
+          <icon class="icon" type="success" size="40rpx" wx:if='{{ifFlag==0}}' color="{{flag==false && navtext==index1 ?'#01FFFF':'#EDECE8'}}" />
+          {{index1}}
+        </view>
+        <view class="typenav-ri {{typeitemsFlag!=index1?'typenav-ri1':''}}" bindtap="typeitemsShow" data-downindex='{{index1}}' wx:if='{{typeitems.length>0}}'>
+          <text decode='true'>&gt;</text>
+        </view>   
+      </view>
+      <view class="typeitems" wx:if='{{typeitemsFlag!=index1}}'>
+        <view class="typeitem" wx:for='{{typeitems}}' wx:key='*this' bindtap='typeSelect' data-itemindex='{{index}}' data-typeindex='{{index1}}'>
+          <icon class="icon" type="success" size="40rpx" color="{{item.checked?'#01FFFF':'#EDECE8'}}"/>
+          {{item.name}}
+        </view>
+      </view>
+    </view>
+    
+  </view> 
+</view>
+<view style="height:100rpx;line-height:100rpx;background:red;color:white;margin-top:100rpx;text-align:center" 
+bindtap='selectsure'>确定</view>
+
+
+

@@ -1,0 +1,127 @@
+<!--index.wxml-->
+<!-- 下拉筛选面板模块 -->
+<view class="selectbox" id="selbox">
+  <view class="nav">
+		<view class="nav-son {{shownavindex == index? 'active' : ''}}" wx:for='{{navName}}' wx:key='*this' data-sonindex='{{index}}' bindtap='navCon'>
+			<view class="content">{{item}}</view>
+      <view class="icon"></view>
+		</view>
+  </view>
+	<view class="navCon">
+		<!-- 默认排序 -->
+		<view class="sort {{navConflag==0?'':''}}" wx:if='{{navConflag==0}}'>
+			<view class="sortitem {{selected==index?'sortselect':''}}" wx:for="{{sortnav}}" wx:key="*this"  bindtap='sortBtn' data-sortindex="{{index}}" >
+				{{item}}
+			</view>	
+  	</view>
+
+		<!-- 品牌 -->
+		<view class='brand'  wx:if='{{navConflag==1}}'>
+      <view class="brandCons {{iscon?'brandConshow':'brandConhide'}}">
+        <scroll-view class="brandL" scroll-y scroll-into-view="id{{toView}}">
+          <block wx:for='{{list}}' wx:key='id'>
+            <view class='brandref' id='id{{item.id}}'>{{item.title}}</view>
+            <!-- 热门品牌 -->
+            <view class="brandhotitem" wx:for='{{item.list}}' wx:key='i' wx:for-item='n' data-id='{{item.id}}' data-name='{{n.name}}' wx:if='{{item.id==0}}'>
+              <image src="{{n.src}}"></image>
+              <view>{{n.name}}</view>
+            </view>
+            <view class="clear"></view>
+            <!-- 品牌展示 -->
+            <view class='brandli' wx:for='{{item.list}}' wx:key='i' wx:for-item='n' data-id='{{item.id}}' data-name='{{n.name}}' bindtap='getBrandName' wx:if='{{item.id!=0}}' data-brandid='{{n.id}}'>
+              <image src='{{n.src}}' class="{{item.id==1? 'imghid':''}}"></image>
+              {{n.name}}    
+            </view>     
+          </block>
+        </scroll-view>
+        <view class='brandR'>
+          <view wx:for='{{nav}}' bindtap='toView' data-i='{{index}}' wx:key='a'>
+            {{item}}
+          </view>
+        </view>
+      </view>
+      <view class="brandbox {{iscon?'brandConhide':'brandConshow'}}">
+        <view class="brandnav ">全部车系</view>
+        <view class="brandcons">
+          <view class="brandconsall" bindtap="getCartypeall">
+            不限
+          </view>
+          <view class="brandcon" wx:for="{{alls}}" wx:key='*this'>
+            <view class="brandconitems">
+              <view class="brandconitem">
+                <view class="brandconitem-le" bindtap="getCartype" data-itemindex='{{index}}'>{{item.name}}</view>
+                <view class="brandconitem-ri"><image src='{{item.src}}'/></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+			
+		</view>
+
+		<!-- 价格 -->
+		<view class="price" wx:if='{{navConflag==2}}'>
+			<view class="pricezi">
+				<view>自定义</view>
+				<view class="pricezi2">
+					<view class="pricezi2-inp">
+						<input value='{{pricemin}}' bindblur='priceMin'/> <text>万</text>
+					</view>
+					<view class="pricezi2-">-</view>
+					<view class="pricezi2-inp">
+						<input value='{{pricemax}}' bindblur='priceMax'/>万
+					</view>
+					<view class="pricezi2-sure" bindtap='priceSure'>确定</view>
+				</view>
+			</view>
+			<view class="borderbox">
+				<view class="borderitem {{priceflag==index?'selectsty':''}}" wx:for='{{btnbox}}' wx:key='index' bindtap='priceBtn' data-priindex="{{index}}" data-pricemin="{{item.pricemin}}" data-pricemax="{{item.pricemax}}" data-text="{{item.text}}">
+					{{item.text}}
+				</view>
+			</view>
+		</view>
+
+		<!-- 级别 -->
+		<view class="level borderbox" wx:if='{{navConflag==3}}'>
+			<view class="borderitem {{levelflag==index?'selectsty':''}}" wx:for='{{level}}' wx:key='index' bindtap='levelBtn' data-levindex="{{index}}" data-levname="{{item}}">
+				{{item}}
+			</view>		
+		</view>	
+	</view>
+  <view class="fullbg {{isfull?'fullopacity':''}}" bindtap='hidebg' catchtouchmove="move"></view> 
+
+  
+</view>
+
+<!-- <view class="nonepage"></view> -->
+
+<!-- 展示选中的按钮值 -->
+<view class="navselects">
+	<view class="navselect" wx:if="{{navselects.length!=0}}" wx:for='{{navselects}}' wx:key='{{index}}'>{{item}} <text bindtap='clearSelect' data-clearindex='{{index}}'>X</text>
+	</view>
+</view>
+
+<!-- 商品展示模块 -->
+<view class="listbox">
+  <view class="listitem" bindtap="goDetail" wx:for='{{carList}}' wx:key='*this' data-id="{{item.id}}">
+    <view class="listitemle">
+      <image src="{{item.welPic}}"></image>
+    </view>
+    <view class="listitemri">
+      <view class="listitemri1">{{item.type}} {{item.name}} </view>
+      <view class="listitemri2">{{item.engine}}/{{item.carStructure}}/{{item.level}}/{{item.playingCards}}</view>
+      <view class="listitemri3">
+        <view class="listitemri3-le">{{item.sellingPrice}}万</view>
+        <view class="listitemri3-ri">
+          <!-- <view class="listitemri3-ri1">0过户</view> -->
+          <view class="listitemri3-ri2" wx:if="{{item.guarantee != ''}}">质保</view>   
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+</view>

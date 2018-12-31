@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/detail",
+    
+    "pages/index/cartype",
+    "pages/index/brandcar",
+    "pages/index/deploy",
+    "pages/index/select",
+    
+    
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#368DEA",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  }
+}

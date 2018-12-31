@@ -1,0 +1,266 @@
+/* pages/index/detail.wxss */
+
+.swiperBox{
+	width: 100%;
+	height:400rpx;
+}
+.swiperImg{
+	width: 100%;
+	height:100%;
+}
+.imgInfo{
+	margin-top: -70rpx;
+	position: relative;
+	z-index: 999999;
+	padding: 0 24rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+}
+.imgtext{
+	background: rgba(0,0,0,0.7);
+	color: white;
+	padding: 10rpx 20rpx;
+  float: left;
+}
+.imgindex{
+  float:right;
+  height:40rpx;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 10rpx 20rpx;
+}
+.detail1{
+	padding: 24rpx;
+	border-bottom: 20rpx solid #F7F7F7;
+}
+.detail1-tit{
+	font-size: 40rpx;
+	line-height: 60rpx;
+}
+.detail1-con{
+	overflow: hidden;
+}
+.detail1-conle{
+	float: left;
+	font-size: 28rpx;
+	color: #666;
+}
+.detail1-conle1{
+	font-size: 38rpx;
+	color: blue;
+}
+.detail1-conri{
+	float: right;
+	font-size: 34rpx;
+	color: red;
+}
+.detail2{
+	border-bottom: 20rpx solid #F7F7F7;
+}
+.detail2-tit{
+	line-height: 80rpx;
+	border-bottom: 1rpx solid #F7F7F7; 
+	font-size: 34rpx;
+}
+.detail2-tit view{
+	width: 8rpx;
+	height:50rpx;
+	background: black;
+	margin-right: 10rpx;
+	display: inline-block;
+	vertical-align: middle;
+}
+.detail2-cons{
+  overflow: hidden;
+  padding-bottom: 20rpx;
+}
+.detail2-con{
+  width: 33.3%;
+  float: left;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.detail2-con1{
+  font-size: 32rpx;
+}
+.detail2-con2{
+  font-size: 28rpx;
+  color: #666;
+}
+.detail2-conbtn{
+	font-size: 30rpx;
+	text-align: center;
+	color:#F9712C;
+	line-height: 80rpx;
+}
+.detail2-names{
+  padding: 30rpx 20rpx;
+  border-bottom: 1rpx solid #F7F7F7; 
+}
+.detail2-names image{
+  width: 120rpx;
+  height:120rpx;
+  border-radius: 60rpx;
+  border:1px solid #F7F7F7;
+  display: inline-block;
+  vertical-align: middle;
+}
+.detail2-name{
+  display: inline-block;
+  height:120rpx;
+  vertical-align: middle;
+  margin-left: 20rpx;
+}
+.detail2-name1{
+  font-size: 36rpx;
+}
+.detail2-name2{
+  font-size: 28rpx;
+	color: #666;
+  margin-top: 20rpx;
+}
+.detail2-msgs{
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.detail2-msg1{
+  font-size: 36rpx;
+  margin-top: 20rpx;
+}
+.detail2-msg1 text{
+  font-weight: bold;
+  font-size: 36rpx;
+}
+.detail2-msg2{
+  font-size: 28rpx;
+	color: #666;
+  margin-top: 60rpx;
+  line-height: 60rpx;
+}
+.detail2-msg3{
+  height:100rpx;
+}
+.detail2-msg3le{
+  float: left;
+  line-height: 100rpx;
+  font-size: 36rpx;
+}
+.detail2-msg3le text{
+  color:#F9712C;
+}
+.detail2-msg3ri{
+  float:right;
+  background: #F9712C;
+  height:60rpx;
+  margin-top: 20rpx;
+  color: white;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  padding: 0 20rpx;
+}
+.detail2-msg4{
+	text-align: center;
+	font-size: 30rpx;
+}
+.detail2-cars{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20rpx;
+}
+.detail2-car {
+  width: 320rpx;
+  margin-top: 20rpx;
+}
+.detail2-car image{
+  width: 330rpx;
+  height: 260rpx;
+}
+.detail2-car1{
+  font-size: 36rpx;
+  line-height: 50rpx;
+  height:100rpx;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+.detail2-car2{
+  font-size: 28rpx;
+	color: #666;
+}
+.detail2-car3{
+  margin: 16rpx 0 20rpx 0;
+  color: #F9712C;
+  font-size: 36rpx;
+}
+.detail2-car3 text{
+  font-size: 28rpx;
+	color: #666;
+  text-decoration: line-through;
+}
+.msg1over{
+	overflow: hidden;
+	
+}
+.detail2-xian{
+	width: 100%;
+	height:1rpx;
+  background: #F7F7F7; 
+	margin-top: 20rpx;
+}
+.clear{
+  clear:both;
+}
+
+.listitemle{
+  width: 300rpx;
+  height:225rpx;
+}
+.listitemle image{
+  width: 300rpx;
+  height:225rpx;
+}
+.listitemri{
+  flex: 1;
+  margin-left: 20rpx;
+  position: relative;
+}
+.listitemri1{
+  font-size: 36rpx;
+  max-height:100rpx;
+  overflow: hidden; 
+}
+.listitemri2{
+  font-size: 28rpx;
+  color: #A6AAA9;
+  margin-top: 10rpx;
+  max-height:74rpx;
+  overflow: hidden;
+}
+.listitemri3{
+  position: absolute;
+  bottom: 0;
+  width: 390rpx;
+}
+.listitemri3-le{
+  float: left;
+  color: #368DEA;
+  flex:1;
+}
+.listitemri3-ri{
+  float: right;
+  font-size: 24rpx;
+}
+.listitemri3-ri1{
+  display: inline-block;
+  border:1px solid green;
+  padding: 4rpx;
+  color: green;
+  margin-right: 6rpx;
+}
+.listitemri3-ri2{
+  display: inline-block;
+  border:1px solid #D6BF72;
+  padding: 4rpx;
+  color: #D6BF72;
+  margin-top: 10rpx;
+}

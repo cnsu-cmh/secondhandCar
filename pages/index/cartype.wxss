@@ -1,0 +1,48 @@
+/* pages/index/cartype.wxss */
+.cartypePage{
+  background: #C3C3C3;
+  padding-top: 20rpx;
+}
+.type{
+  margin-bottom: 20rpx;
+  background: white;
+}
+.typesty{
+  height:100rpx;
+  line-height: 100rpx;
+  border-bottom:1rpx solid #C3C3C3;
+  padding: 0 20rpx;
+}
+.typeall{
+  background: white;
+  margin-bottom: 20rpx;
+}
+.typenav{
+  display: flex;
+}
+.icon{
+  display:inline-block;
+  height:66rpx;
+  margin-right: 30rpx;
+  vertical-align: middle;
+}
+.typenav-le{
+  flex:1;
+}
+.typenav-ri{
+  margin-top: 25rpx;
+  width: 50rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  text-align:center;
+  transform:rotate(-90deg); 
+}
+.typenav-ri1{
+  transform:rotate(90deg);
+}
+.typeitem{
+  height:100rpx;
+  line-height: 100rpx;
+  border-bottom:1rpx solid #C3C3C3;
+  padding: 0 20rpx;
+}

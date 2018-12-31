@@ -1,0 +1,22 @@
+/* pages/index/select.wxss */
+@import '/pages/index/index.wxss';
+.navselects{
+	margin-top: 20rpx;
+	overflow: hidden;
+	font-size: 36rpx;
+	color: #A6AAA9;
+}
+.navselect{
+	line-height:60rpx;
+	padding: 0 20rpx;
+	border:1px solid #EDECE8;
+	margin-left: 20rpx;
+	float:left;
+}
+.navselect text{
+	margin-left: 20rpx;
+}
+.selectsty{
+	border:1rpx solid #DD6A0F;
+	background:#E8E9E9; 
+}

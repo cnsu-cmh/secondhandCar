@@ -1,0 +1,21 @@
+<!--pages/index/deploy.wxml-->
+<view class="deployPage">
+	<view class="deployinfo">
+		注：以下参数配置信息仅供参考，实际参数以卖家售卖车辆为准！
+	</view>
+	<view class="deployboxs">
+		<view class="deploybox" wx:for='{{deploylist}}' wx:for-item='deploys' wx:for-index='boxindex' wx:key='*this'>
+			<view class="deploybox-title" bindtap="infoShow" data-infoindex='{{boxindex}}'>
+				<view class="deploybox-titlele">{{boxindex}}</view>
+				<text class="deploybox-titleri {{styFlag==boxindex?'textsty':''}}" decode='true'>&gt;</text>
+			</view>
+			<view class="deploys" wx:for='{{deploys}}' wx:key='{{index}}' wx:if='{{styFlag==boxindex}}'>
+      <!-- <view class="deploys" wx:if='{{styFlag==index}}'> -->
+				<view class="deploy">
+					<view class="deployle">{{index}}</view>
+					<view class="deployri">{{item}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,27 @@
+/* pages/index/brandcar.wxss */
+.brandnav{
+  height:100rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+}
+.brandconitem{
+  display: flex;
+  height:100rpx;
+  border-bottom:1rpx solid #C3C3C3;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+}
+.brandconitem-le{
+  flex:1;
+  line-height: 100rpx;
+}
+.brandconitem-ri{
+  width: 80rpx;
+  height:100rpx;
+}
+.brandconitem-ri image{
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+  margin-top: 10rpx;
+}

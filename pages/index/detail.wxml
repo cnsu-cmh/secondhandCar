@@ -1,0 +1,88 @@
+<!--pages/index/detail.wxml-->
+<view class="detailPage">
+	<swiper class="swiperBox" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange='swiperChange'>
+		<block wx:for="{{imgUrls}}" wx:key='{{index}}'>
+			<swiper-item>
+				<image class="swiperImg" src="{{item.path}}" bindtap="preImg" data-imgsrc='{{item}}' />
+			</swiper-item>
+		</block>
+	</swiper>
+	<view class="imgInfo">
+		<view class="imgtext">陆良|{{dateTime}}</view>
+    <view class="imgindex">{{imgcur}}</view>
+	</view>
+	<view class="detail1">
+		<view class="detail1-tit">{{detailInfo.type}}</view>
+		<view class="detail1-con">
+			<view class="detail1-conle">
+				<text class="detail1-conle1">￥{{detailInfo.sellingPrice}}万</text>
+				<text>(可商议)</text>
+			</view>
+			<view class="detail1-conri" bindtap="call">
+				询问低价
+			</view>
+		</view>
+	</view>
+	<view class="detail2">
+		<view class="detail2-tit">
+			<view></view>	基础信息
+		</view>
+		<view class="detail2-cons">
+      <view class="detail2-con" wx:for="{{baseinfo}}" wx:key='*this'>
+        <view class="detail2-con1">{{item}}</view>
+        <view class="detail2-con2">{{index}}</view>
+      </view>
+      <view class="clear"></view>
+			<view class="detail2-conbtn" bindtap="goDeploy">查看参数配置</view>
+    </view>
+	</view>
+  <view class="detail2">
+		<view class="detail2-tit">
+			<view></view>	卖家信息
+		</view>
+		<view class="detail2-names">
+      <image src="../../images/car1.jpg"/>
+      <view class="detail2-name">
+        <view class="detail2-name1">{{seller.name}}</view>
+        <view class="detail2-name2">在售车：{{count}}辆</view>
+      </view>
+    </view>
+    <view class="detail2-msgs">
+      <view class="detail2-msg1"><text>地址：</text>{{seller.address}}</view>
+      <view class="detail2-msg1 msg1over" style="height:{{height}}"><text>介绍：</text>{{seller.introduceStr}}</view>
+      <view class="detail2-msg2">联系我时，请说明是在二手车小程序看到的信息</view>
+			<view class="detail2-msg4" bindtap="msg4Show">{{msg4}}</view>
+			<view class="detail2-xian"></view>
+      <view class="detail2-msg3">
+        <view class="detail2-msg3le">车主报价： <text>￥{{detailInfo.sellingPrice}}万</text> </view>
+        <view class="detail2-msg3ri" bindtap="call">询问底价</view>
+      </view>
+    </view>
+	</view>
+  
+  <view class="detail2">
+		<view class="detail2-tit">
+			<view></view>	相似车源推荐
+		</view>
+		<view class="detail2-cars"  bindtap="goDetail" wx:for="{{similars}}" wx:key='*this' data-id="{{item.id}}">
+      <view class="listitemle">
+        <image src="{{item.welPic}}"></image>
+      </view>
+      <view class="listitemri">
+        <view class="listitemri1">{{item.type}} {{item.name}} </view>
+        <view class="listitemri2">{{item.engine}}/{{item.carStructure}}/{{item.level}}/{{item.playingCards}}</view>
+        <view class="listitemri3">
+          <view class="listitemri3-le">{{item.sellingPrice}}万</view>
+          <view class="listitemri3-ri">
+            <!-- <view class="listitemri3-ri1">0过户</view> -->
+            <view class="listitemri3-ri2" wx:if="{{item.guarantee != ''}}">质保</view>   
+          </view>
+        </view>
+      </view>
+    </view>
+	</view>
+
+
+</view>
+
